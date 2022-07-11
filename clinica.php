@@ -1,19 +1,23 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 //Definicion de pacientes
 $aPacientes = array();
-$aPacientes[] = array(
+$aPacientes[1] = array(
     "dni" => "33.765.012",
     "nombre" => "Ana Acuña",
     "edad" => 45,
     "peso" => 81.50,
 );
-$aPacientes[] = array(
+$aPacientes[2] = array(
     "dni" => "23.684.385",
     "nombre" => "Gonzalo Bustamante",
     "edad" => 66,
     "peso" => 79,
 );
-$aPacientes[] = array(
+$aPacientes[3] = array(
     "dni" => "11.568.778",
     "nombre" => "Martín Perez",
     "edad" => 26,
@@ -34,7 +38,7 @@ $aPacientes[] = array(
 
 <body>
     <main class="container">
-        <div class="row">
+        <div class="row col-12 py-5">
             <div class="col-12">
                 <h1>Listado de Pacientes</h1>
             </div>
@@ -51,12 +55,12 @@ $aPacientes[] = array(
                         </tr>
                     </thead>
                     <tbody>
-                        <?php for ($i = 0; si < count($aPacientes); $i++) { ?>
+                        <?php for ($i = 0; $i < count($aPacientes); $i++) { ?>
                             <tr>
-                                <td><?php echo $paciente["dni"];  ?></td>
-                                <td><?php echo $paciente["nombre"];  ?></td>
-                                <td><?php echo $paciente["edad"];  ?></td>
-                                <td><?php echo $paciente["peso"];  ?></td>
+                                <td><?php echo $aPacientes["dni"];  ?></td>
+                                <td><?php echo $aPacientes["nombre"];  ?></td>
+                                <td><?php echo $aPacientes["edad"];  ?></td>
+                                <td><?php echo $aPacientes["peso"];  ?></td>
                             </tr>
                         <?php } ?>
 
