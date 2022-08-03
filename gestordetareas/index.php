@@ -105,9 +105,9 @@ if (isset($_GET["do"]) && $_GET["do"] == "eliminar") {
                             <label for="lstUsuario">Usuario</label>
                             <select name="lstUsuario" id="lstUsuario" class="form-control" required>
                                 <option value="" disabled selected>Seleccionar</option>
-                                <option value="Ana" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Ana" ? "selected" : "";?>>Ana</option>
-                                <option value="Bernabe" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Bernabe" ? "selected" : "";?>>Bernabe</option>
-                                <option value="Daniela" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Daniela" ? "selected" : "";?>>Daniela</option>
+                                <option value="Christian" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Christian" ? "selected" : "";?>>Christian</option>
+                                <option value="Antonella" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Antonella" ? "selected" : "";?>>Antonella</option>
+                                <option value="Trinidad" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Trinidad" ? "selected" : "";?>>Trinidad</option>
                             </select>
                         </div>
                         <div class="py-1 col-4">
