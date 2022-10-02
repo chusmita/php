@@ -12,11 +12,12 @@ if (file_exists("archivo.txt")) {
     $aTareas = array();
 }
 
-if (isset($_GET["id"])) {
+if (isset($_GET["id"]) && $_GET["id"] >= 0)  {
     $id = $_GET["id"];
 } else {
     $id = "";
 }
+//$id = isset($_GET["id"]) && $_GET["id"] >= 0 ? $_GET["id"] : "";
 
 if($_POST){
     $titulo = $_POST["txtTitulo"];
@@ -48,10 +49,8 @@ if($_POST){
         );
 
     }
-
     //Convertir el array de aTareas en json
     $strJson = json_encode($aTareas);
-
     //Almacenar en un archivo.txt el json con file_put_contents
     file_put_contents("archivo.txt", $strJson);
 }
@@ -105,9 +104,9 @@ if (isset($_GET["do"]) && $_GET["do"] == "eliminar") {
                             <label for="lstUsuario">Usuario</label>
                             <select name="lstUsuario" id="lstUsuario" class="form-control" required>
                                 <option value="" disabled selected>Seleccionar</option>
-                                <option value="Christian" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Christian" ? "selected" : "";?>>Christian</option>
-                                <option value="Antonella" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Antonella" ? "selected" : "";?>>Antonella</option>
-                                <option value="Trinidad" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Trinidad" ? "selected" : "";?>>Trinidad</option>
+                                <option value="Ana" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Ana" ? "selected" : "";?>>Ana</option>
+                                <option value="Bernabe" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Bernabe" ? "selected" : "";?>>Bernabe</option>
+                                <option value="Daniela" <?php echo isset($aTareas[$id]) && $aTareas[$id]["usuario"] == "Daniela" ? "selected" : "";?>>Daniela</option>
                             </select>
                         </div>
                         <div class="py-1 col-4">
@@ -167,7 +166,7 @@ if (isset($_GET["do"]) && $_GET["do"] == "eliminar") {
                             <td><?php echo $tarea["usuario"]; ?></td>
                             <td><?php echo $tarea["estado"]; ?></td>
                             <td>
-                                <a href="?id=<?php echo $pos ?>" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="?id=<?php echo $pos ?>&do=editar" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
                                 <a href="?id=<?php echo $pos ?>&do=eliminar" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
                             </td>
                         </tr>

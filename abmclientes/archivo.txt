@@ -1,1 +1,1 @@
-{"0":{"documento":"4255666","nombre":"diego","telefono":"41573","correo":"facundo@gmail.com","imagen":""},"3":{"documento":"78978978","nombre":"Jose Cuevas","telefono":"45345435135","correo":"adsihols@hotmail.com","imagen":"2022080302085746.jpg"}}
+[{"documento":"39222738","nombre":"Nelson Daniel","telefono":"1162423341","correo":"nelson.tarche@gmail.com","imagen":"2022080201083841.png"}]
