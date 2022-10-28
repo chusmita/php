@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<script>
+   let aArticulos = new Array(
+        ["Yerba", 200],
+        ["Azúcar", 50],
+        ["Tallarines", 80],
+        ["Leche", 40]
+    );
+    function actualizarPrecios(aValores, porcentaje){
+        return aValores.map(function (item) {
+        let aResultado = new Array(item[0], item[1], item[2], item[3] * ((porcentaje / 100) + 10));
+        return aResultado;
+    });
+}
+
+   function imprimirPoductos(aArray){
+    
+    document.write(`<main class='container'>
+                        <div class="row">
+                            <div class="col-12 text-center py-5">
+                                <h1>Lista actualiazada de precios</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-hover border">
+                        `);
+
+
+    }
+    imprimirPoductos(aArticulos);
+</script>
+<body>
+
+</body>
+</html>
